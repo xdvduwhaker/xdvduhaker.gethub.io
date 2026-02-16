@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصفحة الرئيسية</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    height:100vh; /* تغطي الشاشة بالكامل */
+    background: url('hero.jpg') center center / cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+/* طبقة شفافة فوق الصورة */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.hero h1{
+    position:relative;
+    color:#fff;
+    font-size:60px;
+    z-index:1;
+    text-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+    <h1>الهاكر الروسي</h1>
+</div>
+
+</body>
+</html>
